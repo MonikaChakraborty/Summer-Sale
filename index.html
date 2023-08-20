@@ -48,8 +48,9 @@
       <div class="flex flex-col lg:flex-row">
         
         <!-- kitchenware section -->
-        <section class="max-w-screen-xl mx-auto">
-          <section class="my-28">
+        <div id="grandparent" class="max-w-screen-xl mx-auto my-28">
+          <!-- <section class="my-28"> -->
+
             <h3 class="text-4xl text-[#111] font-semibold mb-8">Kitchenware</h3>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -58,7 +59,7 @@
                     <figure class="px-10 pt-10 bg-slate-200	mx-4 my-4 rounded-lg">
                       <img src="./images/prod1.png" alt="Shoes" class="rounded-xl mb-3" />
                     </figure>
-                    <div class="card-body items-center text-center">
+                    <div onclick="handleClickBtn(this)" class="card-body items-center text-center">
                         <div class="rating">
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#FFC107]" />
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#FFC107]"  />
@@ -66,7 +67,7 @@
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#FFC107]" />
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#FFC107]" />
                           </div>
-                      <h2 class="card-title text-xl font-semibold text-[#111]">K. Accessories</h2>
+                      <h2 class="card-title text-xl font-semibold text-[#111]">Spoon Set</h2>
                       <p class="text-slate-500 text-xl">39.00 TK</p>
                       <div class="card-actions">
                       </div>
@@ -79,7 +80,7 @@
                     <figure class="px-10 pt-10 bg-slate-200	mx-4 my-4 rounded-lg">
                       <img src="./images/prod2.png" alt="Shoes" class="rounded-xl mb-3" />
                     </figure>
-                    <div class="card-body items-center text-center">
+                    <div onclick="handleClickBtn(this)" class="card-body items-center text-center">
                         <div class="rating">
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#FFC107]" />
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#FFC107]"  />
@@ -101,7 +102,7 @@
                     <figure class="px-10 pt-10 bg-slate-200	mx-4 my-4 rounded-lg">
                       <img src="./images/prod3.png" alt="Shoes" class="rounded-xl mb-3" />
                     </figure>
-                    <div class="card-body items-center text-center">
+                    <div onclick="handleClickBtn(this)" class="card-body items-center text-center">
                         <div class="rating">
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#FFC107]" />
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#FFC107]"  />
@@ -117,33 +118,34 @@
                     </div>
                 </div>
             </div>
-        </section>
+        <!-- </section> -->
   
   
         <!-- Sportswear section -->
-        <section class="my-28">
-            <h3 class="text-4xl text-[#111] font-semibold mb-8">Sportswear</h3>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <!-- card 1 -->
-                <div class="card bg-base-100 shadow-xl">
-                    <figure class="px-10 pt-10 bg-slate-200	mx-4 my-4 rounded-lg">
-                      <img src="./images/prod4.png" alt="Shoes" class="rounded-xl mb-3" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                        <div class="rating">
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#FFC107]" />
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#FFC107]" checked/>
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#FFC107]" />
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#FFC107]" />
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#FFC107]" />
-                          </div>
-                      <h2 class="card-title text-xl font-semibold text-[#111]">Sports Black Cap</h2>
-                      <p class="text-slate-500 text-xl">49.00 TK</p>
-                      <div class="card-actions">
-                      </div>
+        <!-- <section class="my-28"> -->
+          <h3 class="text-4xl text-[#111] font-semibold mb-8 mt-10">Sportswear</h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- card 1 -->
+            <div class="card bg-base-100 shadow-xl">
+              <figure class="px-10 pt-10 bg-slate-200	mx-4 my-4 rounded-lg">
+                <img src="./images/prod4.png" alt="Shoes" class="rounded-xl mb-3" />
+              </figure>
+              <div onclick="handleClickBtn(this)" class="card-body items-center text-center">
+                <div class="rating">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#FFC107]" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#FFC107]" checked/>
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#FFC107]" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#FFC107]" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#FFC107]" />
+                  </div>
+                  <h2 class="card-title text-xl font-semibold text-[#111]">Sports Black Cap</h2>
+                  <p class="text-slate-500 text-xl">49.00 TK</p>
+                  <div class="card-actions">
+
+                  </div>
                     </div>
-                </div>
+              </div>
   
   
                 <!-- card 2 -->
@@ -151,7 +153,7 @@
                     <figure class="px-10 pt-10 bg-slate-200	mx-4 my-4 rounded-lg">
                       <img src="./images/prod5.png" alt="Shoes" class="rounded-xl mb-3" />
                     </figure>
-                    <div class="card-body items-center text-center">
+                    <div onclick="handleClickBtn(this)" class="card-body items-center text-center">
                         <div class="rating">
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#FFC107]" />
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#FFC107]"  />
@@ -172,7 +174,7 @@
                     <figure class="px-10 pt-10 bg-slate-200	mx-4 my-4 rounded-lg">
                       <img src="./images/prod6.png" alt="Shoes" class="rounded-xl mb-3" />
                     </figure>
-                    <div class="card-body items-center text-center">
+                    <div onclick="handleClickBtn(this)" class="card-body items-center text-center">
                         <div class="rating">
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#FFC107]" />
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#FFC107]"  />
@@ -187,41 +189,45 @@
                     </div>
                 </div>
   
-            </div>
-  
-        </section>
-  
-         </section>
-         
-      <!-- coupon and cart section -->
-      <section class="max-w-screen-xl mx-auto my-48">
-        <!-- coupon container -->
-        <div class="rounded-lg bg-white px-5 py-6 mb-3">
-
-          <div class="form-control">
-            <label class="label">
-              <span class="label-text text-[#111] text-xl font-medium">Have coupon?</span>
-            </label>
-            <label class="input-group">
-              <input type="text" placeholder="Coupon code" class="input input-bordered" />
-              <span class="bg-[#E527B2] text-white font-semibold">Apply</span>
-            </label>
           </div>
-          <!-- <h1>Have coupon?</h1>
-          <input class="border border-slate-300 rounded" type="text" placeholder="Coupon code">
-          <button class="text-white rounded px-2 -ml-12 bg-[#E527B2]">Apply</button> -->
+  
+        <!-- </section> -->
+  
         </div>
+         
+         
+         <!-- coupon and cart section -->
+         
+         <div class="max-w-screen-xl mx-auto my-48">
+          
+          <!-- coupon container -->
+          <div class="rounded-lg bg-white px-5 py-6 mb-3">
+            
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text text-[#111] text-xl font-medium">Have coupon?</span>
+              </label>
+              <label class="input-group">
+                <input type="text" placeholder="Coupon code" class="input input-bordered" />
+                <span class="bg-[#E527B2] text-white font-semibold">Apply</span>
+              </label>
+            </div>
+            <!-- <h1>Have coupon?</h1>
+              <input class="border border-slate-300 rounded" type="text" placeholder="Coupon code">
+              <button class="text-white rounded px-2 -ml-12 bg-[#E527B2]">Apply</button> -->
+            
+          </div>
 
         <!-- cart container -->
         <div class="bg-white rounded-lg px-5 py-6 ">
-          <div class="items-entry">
+          <div id="selected-items" class="items-entry">
 
           </div>
 
           <hr>
 
           <div class="mt-3 space-y-3">
-            <h6 class="text-lg font-medium text-[#111]">Total price: <span class="text-slate-500"><span>00.00</span> TK</span></h6>
+            <h6 class="text-lg font-medium text-[#111]">Total price: <span class="text-slate-500"><span id="total">00.00</span> TK</span></h6>
             <h6 class="text-lg font-medium text-[#111]">Discount: <span class="text-slate-500"><span>00.00</span> TK</span></h6>
             <h6 class="text-lg font-medium text-[#111]">Total: <span class="text-slate-500"><span>00.00</span> TK</span></h6>
 
@@ -233,10 +239,10 @@
           </div>
         </div>
        
-      </section>
       </div>
-       
-
+      </div>
     </main>
+
+    <script src="index.js"></script>
 </body>
 </html>

@@ -1,4 +1,14 @@
 let total = 0;
+const applyButton = document.getElementById('applyButton');
+const purchaseButton = document.getElementById('purchaseButton');
+
+applyButton.setAttribute('disabled', '');
+purchaseButton.setAttribute('disabled', '');
+applyButton.classList.add('cursor-not-allowed');
+purchaseButton.classList.add('cursor-not-allowed');
+
+
+const couponInput = document.getElementById('coupon');
 
 function handleClickBtn(target){
     const selectedItemContainer = document.getElementById('selected-items');
@@ -24,8 +34,49 @@ function handleClickBtn(target){
     total = parseFloat(total) + parseFloat(price);
     totalTwoDecimal = total.toFixed(2);
 
-    console.log(totalTwoDecimal);
+    // console.log(totalTwoDecimal);
 
     document.getElementById('total').innerText = totalTwoDecimal;
 
+
+    if(total >= 200){
+        applyButton.removeAttribute('disabled');
+        applyButton.classList.add('cursor-pointer');
+        applyButton.classList.remove('cursor-not-allowed');
+        applyButton.addEventListener('click', handleClickApplyBtn);
+    }else{
+        applyButton.setAttribute('disabled', '');
+        applyButton.classList.remove('cursor-pointer');
+        applyButton.classList.add('cursor-not-allowed');
+        applyButton.removeEventListener('click', handleClickApplyBtn);
+
+        if(total > 0){
+            purchaseButton.removeAttribute('disabled');
+            purchaseButton.classList.add('cursor-pointer');
+            purchaseButton.classList.remove('cursor-not-allowed');
+        }else{
+            purchaseButton.setAttribute('disable', '');
+            purchaseButton.classList.remove('cursor-pointer');
+            // purchaseButton.classList.add('cursor-not-allowed');
+        }
+    }
+
+
+
+}
+
+function handleClickApplyBtn(){
+    const couponCode = couponInput.value.trim();
+    
+
+    if(couponCode === 'SELL200'){
+        const discountPrice = total * 0.2;
+        const discountTotal = total - discountPrice;
+
+        document.getElementById('discountPrice').innerText = discountPrice.toFixed(2);
+
+        document.getElementById('discountTotal').innerText = discountTotal.toFixed(2);
+    }
+
+    console.log(couponCode);
 }

@@ -80,3 +80,9 @@ function handleClickApplyBtn(){
 
     console.log(couponCode);
 }
+
+function closeModal(){
+    const modal = document.getElementById('congoModal');
+    // modal.close();
+    window.location.reload();
+}

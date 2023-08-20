@@ -45,7 +45,7 @@
 
 
     <!-- main section -->
-    <main class=" bg-slate-400">
+    <main class=" bg-[#F8F8F8]">
 
       <!-- main container -->
       <div class="flex flex-col lg:flex-row">
@@ -237,14 +237,16 @@
               <!-- <button class="">Make Purchase</button> -->
 
               <!-- Open the modal using ID.showModal() method -->
-              <button id="purchaseButton" class="btn text-white bg-[#E527B2] w-full rounded-lg py-2 text-lg font-semibold purchase-button" onclick="my_modal_1.showModal()">Make Purchase</button>
-              <dialog id="my_modal_1" class="modal">
-                <form method="dialog" class="modal-box">
-                  <h3 class="font-bold text-lg">Hello!</h3>
-                  <p class="py-4">Press ESC key or click the button below to close</p>
+              <button id="purchaseButton" class="btn text-white bg-[#E527B2] w-full rounded-lg py-2 text-lg font-semibold purchase-button" onclick="congoModal.showModal()">Make Purchase</button>
+              <dialog id="congoModal" class="modal text-center">
+                <form method="dialog" class="modal-box flex flex-col justify-center items-center">
+                  <img class="my-16" src="./images/congo.png" alt="">
+
+                  <h3 class="font-bold text-4xl">Congratulations</h3>
+                  <p class="py-4 px-4 text-slate-500 text-lg">You purchased the product</p>
                   <div class="modal-action">
                     <!-- if there is a button in form, it will close the modal -->
-                    <button class="btn">Close</button>
+                    <button  class="btn bg-[#E527B2] text-white" onclick="closeModal()">Go Home</button>
                   </div>
                 </form>
               </dialog>

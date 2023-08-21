@@ -7,14 +7,12 @@ purchaseButton.setAttribute('disabled', '');
 applyButton.classList.add('cursor-not-allowed');
 purchaseButton.classList.add('cursor-not-allowed');
 
-
 const couponInput = document.getElementById('coupon');
 
 function handleClickBtn(target){
     const selectedItemContainer = document.getElementById('selected-items');
     const itemName = target.parentNode.childNodes[3].childNodes[3].innerText;
     // console.log(itemName);
-
 
     const count = selectedItemContainer.childElementCount;
 
@@ -37,33 +35,31 @@ function handleClickBtn(target){
     // console.log(totalTwoDecimal);
 
     document.getElementById('total').innerText = totalTwoDecimal;
-
-
+    
     if(total >= 200){
         applyButton.removeAttribute('disabled');
         applyButton.classList.add('cursor-pointer');
         applyButton.classList.remove('cursor-not-allowed');
+        applyButton.style.backgroundColor = '#E527B2';
+        applyButton.style.color = 'white';
         applyButton.addEventListener('click', handleClickApplyBtn);
     }else{
         applyButton.setAttribute('disabled', '');
         applyButton.classList.remove('cursor-pointer');
-        applyButton.classList.add('cursor-not-allowed');
         applyButton.removeEventListener('click', handleClickApplyBtn);
-
-        if(total > 0){
-            purchaseButton.removeAttribute('disabled');
-            purchaseButton.classList.add('cursor-pointer');
-            purchaseButton.classList.remove('cursor-not-allowed');
-        }else{
+    }
+        
+        
+    if(total > 0){
+        purchaseButton.removeAttribute('disabled');
+        purchaseButton.classList.add('cursor-pointer');
+        purchaseButton.classList.remove('cursor-not-allowed');
+    }else{
             purchaseButton.setAttribute('disable', '');
             purchaseButton.classList.remove('cursor-pointer');
-            // purchaseButton.classList.add('cursor-not-allowed');
-        }
     }
-
-
-
 }
+
 
 function handleClickApplyBtn(){
     const couponCode = couponInput.value.trim();
@@ -78,11 +74,10 @@ function handleClickApplyBtn(){
         document.getElementById('discountTotal').innerText = discountTotal.toFixed(2);
     }
 
-    console.log(couponCode);
+    // console.log(couponCode);
 }
 
 function closeModal(){
     const modal = document.getElementById('congoModal');
-    // modal.close();
     window.location.reload();
 }
